@@ -1,13 +1,14 @@
 # Ext.js Loader for Webpack
 
+Based on https://www.npmjs.com/package/extjs-loader
 
 ## Install
 ```bash
-npm install --save-dev extjs-loader
+npm install --save-dev extjs-class-loader
 ```
 ## Usage
 
-The `extjs-loader` interprets:
+The `extjs-class-loader` interprets:
  
  * `Ext.define` properties `requires`, `uses`, `mixins` configs like `requires`.
  * `Ext.application` property `controllers`
@@ -26,7 +27,7 @@ module.exports = {
         test: /\.js/,
         use: [
             {
-                loader: 'extjs-loader',
+                loader: 'extjs-class-loader',
                 debug: true,
                 nameSpace: 'MyApp',
                 paths: {

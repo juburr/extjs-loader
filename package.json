@@ -1,7 +1,7 @@
 {
-  "author": "Zoltan Magyar",
+  "author": "Alexey Makarov",
   "bugs": {
-    "url": "https://github.com/zmagyar/extjs-loader/issues"
+    "url": "https://github.com/bostandyksoft/extjs-loader/issues"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
@@ -28,7 +28,7 @@
     "index.js",
     "lib"
   ],
-  "homepage": "https://github.com/zmagyar/extjs-loader",
+  "homepage": "https://github.com/bostandyksoft/extjs-loader",
   "license": "MIT",
   "maintainers": [
     "zmagyar <zmagyar@gmail.com>"
@@ -39,7 +39,7 @@
     "sencha",
     "webpack-loader"
   ],
-  "name": "extjs-loader",
+  "name": "extjs-class-loader",
   "optionalDependencies": {},
   "version": "1.0.12",
   "main": "index.js",
