@@ -1,2 +1,4 @@
 node_modules/*
 
+/extjs-loader-fork.iml
+/package-lock.json
