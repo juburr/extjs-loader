@@ -80,4 +80,7 @@ Initial release to process project files
 Support for [extjs-parser](https://www.npmjs.com/package/extjs-parser) to allow processing of Ext.js sdk dependencies
 
 ### v1.0.0
-Removed support of extjs-parser. Full refactoring of loader
+Removed support of extjs-parser. Full refactoring of loader.
+ 
+### v1.0.1
+Added tests for various situations
