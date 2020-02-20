@@ -33,6 +33,10 @@ describe('ExtClassParser convert result', function () {
         test('requires', done);
     });
 
+    it('Single Requires', function (done) {
+        test('single_requires', done);
+    });
+
     it('Requires app', function (done) {
         test('requires.app', done);
     });
@@ -63,6 +67,14 @@ describe('ExtClassParser convert result', function () {
 
     it('Model', function (done) {
         test('model', done);
+    });
+
+    it('AutoCreateViewport', function (done) {
+        test('autoCreateViewport', done);
+    });
+
+    it('AutoCreateViewport True', function (done) {
+        test('autoCreateViewport_true', done);
     });
 });
 
