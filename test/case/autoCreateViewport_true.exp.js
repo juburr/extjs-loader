@@ -1,4 +1,4 @@
-require('./test/extjs/view/View.js');
+require('./test/extjs/view/Viewport.js');
 Ext.application({
 
     name: 'Test',
