@@ -76,33 +76,12 @@ describe('ExtClassParser convert result', function () {
     it('AutoCreateViewport True', function (done) {
         test('autoCreateViewport_true', done);
     });
-});
 
-describe('ExtClassParser resolve class', function () {
-
-    let test = function (paths, className, expected, done) {
-        let parser = new ExtClassParser({
-            paths: paths
-        });
-
-        var resolve = parser.resolveClassFile(className);
-
-        expect(expected).to.equalIgnoreSpaces(resolve[0]);
-        done();
-    }
-
-    it('Correct resolve similar path', (done) => {
-        test({
-            Ext: './test/extjs',
-            "Ext.ux": './test/source'
-        }, 'Ext.ux.data.Model', './test/source/data/Model.js', done);
+    it('Mixins Array', function (done) {
+        test('mixins_array', done);
     });
 
-    it('Checking reqexp', (done) => {
-        test({
-            "Ext.ux": './test/source',
-            ExtTux: './test/exttux'
-        }, 'ExtTux.data.Model', './test/exttux/data/Model.js', done);
+    it('Mixins Object', function (done) {
+        test('mixins_object', done);
     });
-
 });
