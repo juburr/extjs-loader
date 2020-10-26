@@ -28,14 +28,15 @@ module.exports = {
         use: [
             {
                 loader: 'extjs-class-loader',
-                debug: true,
-                nameSpace: 'MyApp',
-                paths: {
-                    'Deft': false,
-                    'Ext.ux': 'utils/ux',
-                    'Ext': false,
-                    'Override': 'app/overrides',
-                    'MyApp': 'app'
+                options : {
+                    debug: true,
+                    paths: {
+                        'Deft': false,
+                        'Ext.ux': 'utils/ux',
+                        'Ext': false,
+                        'Override': path.resolve('app/overrides'),
+                        'MyApp': path.resolve('app/src')
+                    }
                 }
             } ]
       }
@@ -59,13 +60,13 @@ module.exports = {
       <td align="center">
         <img width="150" height="150"
         src="https://avatars1.githubusercontent.com/u/1021537?v=3&s=460">
-        </br>
+        <br/>
         <a href="https://github.com/zmagyar">Zoltan Magyar</a>
       </td>
       <td align="center">
         <img width="150" height="150"
         src="https://avatars1.githubusercontent.com/u/11589541?v=3&s=460">
-        </br>
+        <br/>
         <a href="https://github.com/steveetm">Steveetm</a>
       </td>
     </tr>
