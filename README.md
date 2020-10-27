@@ -36,7 +36,9 @@ module.exports = {
                         'Ext': false,
                         'Override': path.resolve('app/overrides'),
                         'MyApp': path.resolve('app/src')
-                    }
+                    },
+                    imports: false,
+                    extentions : ['js', 'ts']
                 }
             } ]
       }
@@ -47,10 +49,14 @@ module.exports = {
 
 ## Options
 
-|Name|Default|Description|
+|Name|Default value|Description|
 |:--:|:-----:|:----------|
 |**`debug`**|`false`|Print status messages for debugging purpose|
 |**`paths`** |`{}`| Define your loader config here. I.e. define how the namespaces in your app should be resolved. If `false` value is used then the given namespace is ignored. It is useful when you include that namespace on other way. E.g. if you include Ext-debug-all.js in your HTML then you do not want to include individual components.|
+|**`extentions`** | `['js']` | Array of Defines extentions of included files. Loader will check, that file is exists before include |
+|**`imports`**| `false`| Use import statement instead of require
+|**`sourceType`**| `module`| Type of source for parsing by <a href="https://esprima.org">esprima</a>. 
+|**`encoding`**| `utf-8`| Encoding of source codes
 
 <h2 align="center">Maintainers</h2>
 
@@ -86,3 +92,8 @@ Removed support of extjs-parser. Full refactoring of loader.
  
 ### v1.0.1
 Added tests for various situations
+
+### v1.0.19
+Added ability to parse files with different sourceType of esprima
+Added ability to use imports instead of require
+Added ability to set array of supported files extentions

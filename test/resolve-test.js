@@ -1,5 +1,6 @@
 var chai = require('chai');
 chai.use(require('chai-string'));
+const sinon = require("sinon").createSandbox();
 var assert = chai.assert;
 var expect = chai.expect;
 var fs = require('fs');
@@ -8,6 +9,15 @@ var path = require('path');
 const {ExtClassParser} = require('../lib/extjs-class-parser.js');
 
 describe('ExtClassParser resolve class', function () {
+
+    var sandBox;
+    beforeEach(() => {
+        sinon.stub(fs, 'existsSync').returns(true);
+    })
+
+    afterEach(() => {
+        sinon.restore();
+    })
 
     let test = function (paths, className, expected, done) {
         let parser = new ExtClassParser({
