@@ -56,15 +56,16 @@ describe('ExtClassParser convert result', function () {
         'Module Requires': 'js_require'
     }
 
+    const makeTest = function (key, importflag) {
+        return function (done) {
+            test(cases[key], importflag, done);
+        }
+    }
+
     for (var key in cases) {
         if (cases.hasOwnProperty(key)) {
-            it(key, function (done) {
-                test(cases[key], false, done);
-            });
-
-            it(key + '/Imports', function (done) {
-                test(cases[key], true, done);
-            });
+            it(key, makeTest(key, false));
+            it(key + ' / Imports', makeTest(key, true));
         }
     }
 
