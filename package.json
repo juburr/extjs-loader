@@ -41,6 +41,7 @@
     "webpack-loader"
   ],
   "name": "extjs-class-loader",
+  "type" : "module",
   "optionalDependencies": {},
   "version": "1.0.19",
   "main": "index.js",

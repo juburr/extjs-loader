@@ -10,7 +10,6 @@ const {ExtClassParser} = require('../lib/extjs-class-parser.js');
 
 describe('ExtClassParser convert result', function () {
 
-    var sandBox;
     beforeEach(() => {
         sinon.stub(fs, 'existsSync').returns(true);
     });
