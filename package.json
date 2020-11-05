@@ -43,7 +43,7 @@
   "name": "extjs-class-loader",
   "type" : "module",
   "optionalDependencies": {},
-  "version": "1.0.19",
+  "version": "1.0.20",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
