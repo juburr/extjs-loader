@@ -41,9 +41,8 @@
     "webpack-loader"
   ],
   "name": "extjs-class-loader",
-  "type" : "module",
   "optionalDependencies": {},
-  "version": "1.0.20",
+  "version": "1.0.21",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
