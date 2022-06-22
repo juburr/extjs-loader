@@ -22,16 +22,23 @@ describe('ExtClassParser convert result', function () {
         const source = fs.readFileSync(path.resolve('test/case', caseName + '.js'), {encoding: 'utf-8'});
         const expected = fs.readFileSync(path.resolve('test/case', caseName + '.exp' + (imports ? '.imports.js' : '.js')), {encoding: 'utf-8'});
 
-        const parseResult = new ExtClassParser({
-            imports: imports,
-            paths: {
-                Test: './test/extjs',
-                Test2: './test/source'
-            }
-        }).parse(source);
+        try {
+            const parseResult = new ExtClassParser({
+                debug: true,
+                imports: imports,
+                paths: {
+                    Test: './test/extjs',
+                    Test2: './test/source'
+                }
+            }).parse(source);
 
-        expect(expected).to.equalIgnoreSpaces(parseResult);
-        done();
+            expect(expected).to.equalIgnoreSpaces(parseResult);
+
+            done();
+        } catch (e) {
+            console.error(e);
+            throw e;
+        }
     }
 
     const cases = {
