@@ -9,7 +9,7 @@
     "escodegen": "2.0.0",
     "esprima-next": "5.8.3",
     "esprima-ast-utils": "0.0.7",
-    "loader-utils": "3.2.0"
+    "loader-utils": "1.1.0"
   },
   "description": "Ext.js loader module for webpack",
   "devDependencies": {
