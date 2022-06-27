@@ -5,6 +5,7 @@ const assert = chai.assert;
 const expect = chai.expect;
 const fs = require('fs');
 const path = require('path');
+const Promise = require('bluebird');
 
 const {ExtClassParser} = require('../lib/extjs-class-parser.js');
 
